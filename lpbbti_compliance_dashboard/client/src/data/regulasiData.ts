@@ -1,3 +1,5 @@
+const GD = (id: string) => `https://drive.google.com/file/d/${id}/preview`;
+
 export interface Regulasi {
   kode: string;
   nama: string;
@@ -9,6 +11,7 @@ export interface Regulasi {
   deadline?: string;
   pasal?: string;
   detailTambahan?: string;
+  dokumenUrl?: string;
 }
 
 export interface KategoriRegulasi {
@@ -32,7 +35,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         status: "Berlaku",
         tahun: 2023,
         pasal: "Pasal 306",
-        detailTambahan: "Mengatur kewenangan OJK dalam penegakan hukum terhadap penyelenggara LPBBTI ilegal."
+        detailTambahan: "Mengatur kewenangan OJK dalam penegakan hukum terhadap penyelenggara LPBBTI ilegal.",
       },
       {
         kode: "UU No. 27/2022",
@@ -41,7 +44,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Kewajiban explicit consent. Larangan penyalahgunaan data kontak/galeri.",
         status: "Berlaku",
         tahun: 2022,
-        detailTambahan: "Platform harus memastikan persetujuan jelas dari pengguna sebelum mengakses data pribadi."
+        detailTambahan: "Platform harus memastikan persetujuan jelas dari pengguna sebelum mengakses data pribadi.",
       },
       {
         kode: "UU No. 1/2024",
@@ -50,7 +53,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Dasar hukum e-contract, pembuktian transaksi digital, e-signature tersertifikasi.",
         status: "Berlaku",
         tahun: 2024,
-        detailTambahan: "Memperkuat keabsahan kontrak elektronik dan tanda tangan digital dalam transaksi LPBBTI."
+        detailTambahan: "Memperkuat keabsahan kontrak elektronik dan tanda tangan digital dalam transaksi LPBBTI.",
       },
       {
         kode: "UU No. 8/1999",
@@ -59,7 +62,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Hak-hak konsumen jasa keuangan. Larangan klausula baku berat sebelah.",
         status: "Berlaku",
         tahun: 1999,
-        detailTambahan: "Melindungi hak lender dan borrower dari praktik bisnis yang tidak adil."
+        detailTambahan: "Melindungi hak lender dan borrower dari praktik bisnis yang tidak adil.",
       },
     ],
   },
@@ -75,7 +78,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Data center & disaster recovery center industri keuangan strategis wajib di wilayah Indonesia.",
         status: "Berlaku",
         tahun: 2019,
-        detailTambahan: "Memastikan keamanan data dan kontinuitas bisnis dengan penempatan infrastruktur di Indonesia."
+        detailTambahan: "Memastikan keamanan data dan kontinuitas bisnis dengan penempatan infrastruktur di Indonesia.",
       },
     ],
   },
@@ -91,7 +94,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Aturan dasar LPBBTI. Modal disetor minimum Rp25 miliar. Batas pendanaan tunggal Rp2 miliar. Kepemilikan asing, tata kelola.",
         status: "Berlaku",
         tahun: 2022,
-        detailTambahan: "Mengatur persyaratan kelembagaan, struktur organisasi, dan manajemen risiko dasar."
+        detailTambahan: "Mengatur persyaratan kelembagaan, struktur organisasi, dan manajemen risiko dasar.",
       },
       {
         kode: "POJK No. 40/2024",
@@ -101,7 +104,8 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         status: "Berlaku",
         tahun: 2024,
         baru: true,
-        detailTambahan: "Regulasi pembaruan yang memperkuat ketahanan industri dan perlindungan konsumen."
+        detailTambahan: "Regulasi pembaruan yang memperkuat ketahanan industri dan perlindungan konsumen.",
+        dokumenUrl: GD("1v4Re99LMNAbk4tNODEeho3CNLJSYkvmD"),
       },
       {
         kode: "POJK No. 42/2024",
@@ -112,7 +116,8 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         tahun: 2024,
         baru: true,
         deadline: "15 Feb 2026",
-        detailTambahan: "Mewajibkan struktur organisasi manajemen risiko yang terpisah dan independen."
+        detailTambahan: "Mewajibkan struktur organisasi manajemen risiko yang terpisah dan independen.",
+        dokumenUrl: GD("1i1pqU3Yniecmkqv8fQi0JIHQGysUxOoA"),
       },
       {
         kode: "POJK No. 43/2024",
@@ -122,7 +127,8 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         status: "Berlaku",
         tahun: 2024,
         baru: true,
-        detailTambahan: "Memastikan SDM LPBBTI memiliki kompetensi dan sertifikasi yang sesuai standar industri."
+        detailTambahan: "Memastikan SDM LPBBTI memiliki kompetensi dan sertifikasi yang sesuai standar industri.",
+        dokumenUrl: GD("1OthUVIpDZ-o4DM4NL6sQThzIzzUGr-S3"),
       },
       {
         kode: "POJK No. 48/2024",
@@ -132,7 +138,8 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         status: "Berlaku",
         tahun: 2024,
         baru: true,
-        detailTambahan: "Mengatur struktur governance dan mekanisme pengambilan keputusan yang transparan."
+        detailTambahan: "Mengatur struktur governance dan mekanisme pengambilan keputusan yang transparan.",
+        dokumenUrl: GD("1xHHAuDKU8n_vd-wdVd9ecWm0vZay56ym"),
       },
       {
         kode: "POJK No. 49/2024",
@@ -142,7 +149,8 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         status: "Berlaku",
         tahun: 2024,
         baru: true,
-        detailTambahan: "Mengatur mekanisme penghitungan tingkat kesehatan dan status pengawasan LPBBTI."
+        detailTambahan: "Mengatur mekanisme penghitungan tingkat kesehatan dan status pengawasan LPBBTI.",
+        dokumenUrl: GD("1vJs9Wpw_H5yzLJGXjBuMd46Zpn_uwd1b"),
       },
       {
         kode: "POJK No. 22/2023",
@@ -151,7 +159,29 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Tata cara pemasaran, larangan penyebaran data konsumen, etika penagihan, penyelesaian sengketa via LAPS-SJK.",
         status: "Berlaku",
         tahun: 2023,
-        detailTambahan: "Melindungi hak konsumen dalam hal transparansi, penagihan etis, dan penyelesaian keluhan."
+        detailTambahan: "Melindungi hak konsumen dalam hal transparansi, penagihan etis, dan penyelesaian keluhan.",
+        dokumenUrl: GD("1KPhJJi7IDfx4ekB-YFCk9FJ7q8C6mu1N"),
+      },
+      {
+        kode: "POJK No. 12/2024",
+        nama: "Penerapan Strategi Anti Fraud bagi Lembaga Jasa Keuangan",
+        domain: ["Anti Fraud", "Tata Kelola"],
+        ringkasan: "Kewajiban penerapan 4 pilar strategi anti fraud: pencegahan, deteksi, investigasi, dan perbaikan. Laporan fraud signifikan ke OJK paling lambat 6 hari kerja.",
+        status: "Berlaku",
+        tahun: 2024,
+        baru: true,
+        detailTambahan: "Mengatur kewajiban penyelenggara untuk memiliki sistem pengendalian internal anti fraud yang efektif, termasuk whistleblowing system (WBS) yang terjamin kerahasiaannya.",
+        dokumenUrl: GD("1BNvdNuDCi-GA_HtF3zw9MAwllqWI6XhG"),
+      },
+      {
+        kode: "POJK No. 9/2023",
+        nama: "Penggunaan Jasa Akuntan Publik dan Kantor Akuntan Publik dalam Kegiatan Jasa Keuangan",
+        domain: ["Audit Eksternal", "Tata Kelola"],
+        ringkasan: "Kewajiban penggunaan AP/KAP yang terdaftar di OJK. Pembatasan masa penugasan audit. Larangan perangkapan jasa audit dan non-audit.",
+        status: "Berlaku",
+        tahun: 2023,
+        detailTambahan: "Mengatur independensi dan kualitas audit eksternal di sektor jasa keuangan termasuk LPBBTI.",
+        dokumenUrl: GD("1H8izFfGi15iNnddTrZPVoZAymf4v1FnO"),
       },
       {
         kode: "POJK No. 8/2023",
@@ -160,7 +190,8 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Kewajiban CDD/EDD dan KYC/e-KYC terhadap lender dan borrower untuk mencegah aliran dana ilegal.",
         status: "Berlaku",
         tahun: 2023,
-        detailTambahan: "Implementasi prosedur Know Your Customer dan Customer Due Diligence yang ketat."
+        detailTambahan: "Implementasi prosedur Know Your Customer dan Customer Due Diligence yang ketat.",
+        dokumenUrl: GD("1tdhuDgKzNRrT_qyQWbdxfjWEhNQ1JqOo"),
       },
     ],
   },
@@ -170,13 +201,47 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
     accent: "#57cc99",
     items: [
       {
-        kode: "SEOJK No. 19/2023",
-        nama: "Penyelenggaraan LPBBTI — Operasional Harian",
-        domain: ["Operasional", "Penagihan", "Bunga"],
-        ringkasan: "Batas bunga harian 2026: konsumtif 0,1%/hari; produktif 0,067%/hari. Maks 3 platform per borrower. Jam penagihan 08.00–20.00.",
+        kode: "SEOJK No. 19/2025",
+        nama: "Penyelenggaraan Layanan Pendanaan Bersama Berbasis Teknologi Informasi",
+        domain: ["Operasional", "Penagihan", "Bunga", "Escrow"],
+        ringkasan: "Pelaksanaan POJK 40/2024. Batas pendanaan maks 3 penyelenggara per borrower. Pengelolaan escrow account. Kegiatan usaha dan mekanisme penyaluran pendanaan.",
         status: "Berlaku",
-        tahun: 2023,
-        detailTambahan: "Mengatur batasan operasional harian termasuk jam penagihan, batas bunga, dan verifikasi platform."
+        tahun: 2025,
+        baru: true,
+        detailTambahan: "Menggantikan SEOJK 19/2023. Mengatur detail operasional penyelenggaraan LPBBTI sesuai POJK 40/2024, termasuk ketentuan escrow account dan batasan jumlah penyelenggara per borrower.",
+        dokumenUrl: GD("1woU7ojeAtuv_y8nXQ4o0FeLVOopKUkIv"),
+      },
+      {
+        kode: "SEOJK No. 28/2025",
+        nama: "Laporan Penerapan Tata Kelola yang Baik bagi PVML",
+        domain: ["Tata Kelola", "Pelaporan"],
+        ringkasan: "Bentuk dan susunan laporan GCG yang wajib disampaikan penyelenggara LPBBTI ke OJK. Amanat Pasal 108 POJK 48/2024.",
+        status: "Berlaku",
+        tahun: 2025,
+        baru: true,
+        detailTambahan: "Mengatur format, isi, dan tata cara penyampaian laporan tata kelola tahunan penyelenggara LPBBTI kepada OJK.",
+        dokumenUrl: GD("1X4JXPpC-zd2l3Ucf51jRttG_JvtWiItW"),
+      },
+      {
+        kode: "SEOJK No. 22/2024",
+        nama: "Penilaian Kemampuan dan Kepatutan bagi Pihak Utama PVML",
+        domain: ["Tata Kelola", "Perizinan"],
+        ringkasan: "Tata cara fit and proper test bagi Direksi, Dewan Komisaris, PSP, dan DPS penyelenggara LPBBTI. Prosedur penilaian dan kategori hasil uji kepatutan.",
+        status: "Berlaku",
+        tahun: 2024,
+        baru: true,
+        detailTambahan: "Menggantikan SEOJK 31/2016. Mengatur kriteria, prosedur, dan tindak lanjut penilaian kemampuan dan kepatutan pihak utama PVML termasuk LPBBTI.",
+        dokumenUrl: GD("1ynb8j1g4myIRMXNYz_xrfeuvdvbrblnv"),
+      },
+      {
+        kode: "SEOJK No. 22/2021",
+        nama: "Penerapan Manajemen Risiko dalam Penggunaan Teknologi Informasi oleh LJKNB",
+        domain: ["Manajemen Risiko", "Infrastruktur TI"],
+        ringkasan: "Standar penerapan manajemen risiko TI: pusat data, pemulihan bencana (DRC), keamanan siber, audit sistem informasi, dan outsourcing TI.",
+        status: "Berlaku",
+        tahun: 2021,
+        detailTambahan: "Mengatur secara detail persyaratan teknis dan tata kelola penggunaan teknologi informasi oleh lembaga jasa keuangan nonbank termasuk penyelenggara LPBBTI.",
+        dokumenUrl: GD("1FFGXDeA4DgC5jWSrfV11PO2V2heu5IXR"),
       },
     ],
   },
@@ -186,13 +251,24 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
     accent: "#bb86fc",
     items: [
       {
+        kode: "PADK No. 38/2025",
+        nama: "Penilaian Tingkat Kesehatan Penyelenggara LPBBTI",
+        domain: ["Tingkat Kesehatan", "Pengawasan OJK"],
+        ringkasan: "Framework penilaian tingkat kesehatan LPBBTI: permodalan, kualitas pendanaan, manajemen, rentabilitas, dan likuiditas (CAMELS). Amanat Pasal 167, 171, dan 177 POJK 40/2024.",
+        status: "Berlaku",
+        tahun: 2025,
+        baru: true,
+        detailTambahan: "Ditetapkan 8 Desember 2025. Mengatur metodologi dan parameter penilaian tingkat kesehatan penyelenggara LPBBTI secara komprehensif.",
+        dokumenUrl: GD("1qhUAkIE_yiT9W8L4Tv02EUmKYMkDtJ6K"),
+      },
+      {
         kode: "PADK OJK",
         nama: "Tata Cara Permohonan Perizinan dan Persetujuan Penyelenggara LPBBTI",
         domain: ["Perizinan"],
         ringkasan: "SOP OJK: proses verifikasi berkas, live testing sistem, penerbitan izin usaha.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Mengatur prosedur lengkap permohonan izin dari tahap pengajuan hingga penerbitan."
+        detailTambahan: "Mengatur prosedur lengkap permohonan izin dari tahap pengajuan hingga penerbitan.",
       },
       {
         kode: "PADK OJK",
@@ -201,7 +277,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Uji kelayakan, integritas, dan kompetensi calon Direksi, Komisaris, dan PSP.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Mengatur kriteria dan prosedur pengujian kelayakan untuk pihak utama penyelenggara."
+        detailTambahan: "Mengatur kriteria dan prosedur pengujian kelayakan untuk pihak utama penyelenggara.",
       },
       {
         kode: "KDK OJK",
@@ -210,7 +286,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Standardisasi transmisi data harian ke OJK. Pemantauan TKB90 real-time.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Sistem terintegrasi untuk pelaporan data harian dan monitoring kesehatan platform."
+        detailTambahan: "Sistem terintegrasi untuk pelaporan data harian dan monitoring kesehatan platform.",
       },
       {
         kode: "KDK OJK",
@@ -219,7 +295,136 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Kebijakan penghentian/pembukaan kembali izin usaha baru berdasarkan evaluasi pasar.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Keputusan berkala OJK mengenai pembukaan atau penghentian izin penyelenggara baru."
+        detailTambahan: "Keputusan berkala OJK mengenai pembukaan atau penghentian izin penyelenggara baru.",
+      },
+    ],
+  },
+  "Surat Masuk OJK": {
+    nama: "Surat Masuk OJK",
+    color: "#7b2d00",
+    accent: "#ff8c42",
+    items: [
+      {
+        kode: "S-142/PL.12/2026",
+        nama: "Larangan Penggunaan Produk Asuransi Yang Membatasi Nilai Klaim Sebesar Persentase Dari Nilai Premi",
+        domain: ["Mitigasi Risiko", "Perlindungan Konsumen"],
+        ringkasan: "OJK melarang penyelenggara LPBBTI menggunakan produk asuransi kredit yang membatasi nilai klaim sebesar persentase dari nilai premi. Penyelenggara wajib beralih ke produk asuransi kredit Konsorsium LPBBTI.",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "Pasal 147 ayat (7) & Pasal 148 POJK 40/2024",
+        detailTambahan: "Diterbitkan 6 Juni 2026. Penyelenggara yang masih menggunakan asuransi dengan mekanisme pembatasan % premi diminta segera melakukan review dan penyesuaian.",
+        dokumenUrl: GD("17RBXR-HHCgCkNTdfG3y3DblBnOff3gyR"),
+      },
+      {
+        kode: "S-137/PL.12/2026",
+        nama: "Permintaan Rincian Rekening Escrow Penyelenggara LPBBTI",
+        domain: ["Escrow", "Pelaporan"],
+        ringkasan: "OJK meminta seluruh penyelenggara menyampaikan rincian rekening escrow. Ditemukan ketidakpatuhan batas waktu penempatan dana (max 2 hari kerja dari Pemberi Dana, max 1 hari kerja dari Penerima Dana).",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "Pasal 153 POJK 40/2024",
+        detailTambahan: "Diterbitkan 2 Juni 2026. Penyelenggara wajib memastikan pengembalian dana yang melewati batas waktu ke rekening pengguna pada hari kerja berikutnya.",
+        dokumenUrl: GD("1fkLrGQ7I-TBzoNAsugIOUmJAUdV30xLN"),
+      },
+      {
+        kode: "S-129/PL.12/2026",
+        nama: "Surat Pembinaan: Penguatan Kepatuhan Batas Maksimum Pendanaan pada 3 Penyelenggara",
+        domain: ["Operasional", "Pengawasan OJK"],
+        ringkasan: "OJK menemukan pelanggaran batas maksimum pendanaan (borrower tidak boleh menerima dari lebih dari 3 penyelenggara). Penyelenggara diminta menyampaikan komitmen dan action plan bulanan.",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "Angka 3k BAB XI SEOJK 19/2025",
+        detailTambahan: "Diterbitkan 24 Mei 2026. Laporan pertama untuk posisi data akhir Mei 2026, disampaikan paling lambat 10 Juni 2026. Pelanggaran dapat dikenai sanksi pembekuan kegiatan usaha.",
+        dokumenUrl: GD("1vX77Low1BuLxBhYTY4LY0dLlaxJ9e06l"),
+      },
+      {
+        kode: "S-417/PL.122/2026",
+        nama: "Himbauan Pelaksanaan Penerapan Strategi Anti-Fraud dan Whistleblowing System (WBS)",
+        domain: ["Anti Fraud", "Tata Kelola"],
+        ringkasan: "OJK menghimbau penyelenggara LPBBTI melaksanakan 4 pilar anti fraud dan mensosialisasikan kanal WBS OJK (wbs.pindar@ojk.go.id) kepada pegawai. Bukti sosialisasi wajib disampaikan paling lambat 30 April 2026.",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "POJK No. 12/2024",
+        detailTambahan: "Diterbitkan 15 April 2026. OJK menyediakan kanal WBS khusus industri LPBBTI untuk pelaporan dugaan fraud secara rahasia.",
+        dokumenUrl: GD("1fYG_tmauCKahXfWda8S16i_5hoQWZo0j"),
+      },
+      {
+        kode: "S-22/PL.12/2026",
+        nama: "Undangan Penguatan Tata Kelola dan Kepatuhan Penyelenggara LPBBTI",
+        domain: ["Tata Kelola", "Pengawasan OJK"],
+        ringkasan: "OJK mengundang Direksi dan Dewan Komisaris seluruh penyelenggara LPBBTI untuk menghadiri kegiatan penguatan tata kelola dan kepatuhan pada 9-10 Februari 2026 di The Westin Jakarta.",
+        status: "Berlaku",
+        tahun: 2026,
+        detailTambahan: "Diterbitkan 3 Februari 2026. Konfirmasi kehadiran ke anggiana.diniary@ojk.go.id dan pelaporan.fintech@ojk.go.id paling lambat 6 Februari 2026.",
+        dokumenUrl: GD("1HpYycfXpa6P0mBMjCUshEzJgbTaQPrCr"),
+      },
+      {
+        kode: "S-376/PL.12/2025",
+        nama: "Implementasi Ketentuan Skema Pembayaran Tadpole",
+        domain: ["Operasional", "Perlindungan Konsumen"],
+        ringkasan: "OJK memperbolehkan skema angsuran front-loaded (tadpole) dengan syarat: mematuhi batas manfaat ekonomi, transparansi penuh ke pengguna, dan TWP90 < 5%. Penyelenggara tadpole wajib lapor outstanding dan TWP90 bulanan paling lambat tanggal 10.",
+        status: "Berlaku",
+        tahun: 2025,
+        detailTambahan: "Diterbitkan 8 Desember 2025. Merespons masukan AFPI atas implementasi S-305/PL.12/2025 tentang pembinaan skema pembayaran.",
+        dokumenUrl: GD("1vOUSEiW3ZfhL9kKjVHKG08AVooW-K32N"),
+      },
+      {
+        kode: "S-39/D.06/2025",
+        nama: "Penetapan Provinsi Aceh, Sumut, dan Sumbar sebagai Daerah Terdampak Bencana — Relaksasi PVML",
+        domain: ["Manajemen Risiko", "Operasional"],
+        ringkasan: "OJK memberikan relaksasi penilaian kualitas pembiayaan bagi debitur terdampak bencana hidrometeorologi di Aceh, Sumut, dan Sumbar. Berlaku 3 tahun sejak 10 Desember 2025. LPBBTI memfasilitasi restrukturisasi dengan persetujuan Pemberi Dana.",
+        status: "Berlaku",
+        tahun: 2025,
+        pasal: "POJK No. 19/2022 tentang Perlakuan Khusus Daerah Bencana",
+        detailTambahan: "Diterbitkan 11 Desember 2025. Relaksasi: penetapan kualitas 1 pilar (ketepatan bayar), restrukturisasi langsung menjadi Lancar, pembiayaan baru terpisah dari kualitas existing.",
+        dokumenUrl: GD("1PQZ1JR9MzICtKFUVqzngBrwFAX-14uNq"),
+      },
+    ],
+  },
+  "Surat Pengawasan Internal": {
+    nama: "Surat Pengawasan Internal",
+    color: "#4a0000",
+    accent: "#ff4444",
+    items: [
+      {
+        kode: "S-110/PL.12/2026",
+        nama: "Permintaan Perbaikan atas Rencana Tindak Status Pengawasan Intensif PT Aktivaku Investama Teknologi",
+        domain: ["Pengawasan OJK", "Manajemen Risiko"],
+        ringkasan: "OJK menilai rencana tindak status pengawasan intensif AIT masih perlu perbaikan: (1) belum ditandatangani Komisaris, (2) timeline penambahan modal tidak lengkap, (3) proyeksi rasio EMD masih di bawah 50% minimum, (4) belum ada proyeksi TWP90 akhir Desember 2026.",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "Pasal 33-34 POJK No. 49/2024",
+        detailTambahan: "Diterbitkan 28 April 2026. Batas penyampaian perbaikan: 15 hari kerja sejak tanggal surat. Kegagalan memenuhi ketentuan dapat mengakibatkan sanksi administratif termasuk pembekuan kegiatan usaha.",
+        dokumenUrl: GD("1S94dQ-br8KtqijJw5mmvIzNEFRvV5xFF"),
+      },
+      {
+        kode: "S-235/PL.122/2026",
+        nama: "Sanksi Peringatan Tertulis PT Aktivaku Investama Teknologi",
+        domain: ["Pengawasan OJK", "Tata Kelola"],
+        ringkasan: "OJK mengenakan sanksi peringatan tertulis karena rencana bisnis 2026 tidak disertai dokumen persetujuan Dewan Komisaris. Berlaku sampai ketentuan dipenuhi.",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "Pasal 4 & Pasal 20 ayat (1) POJK No. 24/2019",
+        detailTambahan: "Diterbitkan 24 Februari 2026. Sanksi berdasarkan pelanggaran Pasal 4 POJK 24/2019 (rencana bisnis wajib disetujui Dewan Komisaris).",
+        dokumenUrl: GD("1F1IdrNhyxEjEdOe-hGOma24XBxr1C_EM"),
+      },
+      {
+        kode: "S-233/PL.122/2026",
+        nama: "Surat Tanggapan Rencana Bisnis Tahun 2026 PT Aktivaku Investama Teknologi",
+        domain: ["Pengawasan OJK", "Operasional"],
+        ringkasan: "OJK mencatat RB 2026 AIT dan menyampaikan arahan: penerapan prinsip kehati-hatian, diversifikasi ke sektor produktif/UMKM, pengelolaan escrow optimal, batas manfaat ekonomi, dan perubahan model bisnis wajib mengacu Pasal 186 POJK 40/2024.",
+        status: "Berlaku",
+        tahun: 2026,
+        baru: true,
+        pasal: "POJK No. 40/2024 & POJK No. 24/2019",
+        detailTambahan: "Diterbitkan 24 Februari 2026. Laporan pelaksanaan RB disampaikan secara semesteran sesuai Pasal 14 dan 15 POJK 24/2019.",
+        dokumenUrl: GD("1UaK1CR8JafOchR8qH7j02Z10Q6dVxGEz"),
       },
     ],
   },
@@ -235,7 +440,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Sertifikasi wajib debt collector. Sanksi internal: rekomendasi pencabutan izin ke OJK.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Kode etik yang mengikat semua penyelenggara LPBBTI anggota AFPI."
+        detailTambahan: "Kode etik yang mengikat semua penyelenggara LPBBTI anggota AFPI.",
       },
       {
         kode: "Permen Kominfo",
@@ -244,7 +449,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Kewajiban bermitra dengan PSrE resmi untuk e-signature dan ID digital.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Mengatur penggunaan tanda tangan elektronik dari Penyelenggara Sertifikasi Elektronik resmi."
+        detailTambahan: "Mengatur penggunaan tanda tangan elektronik dari Penyelenggara Sertifikasi Elektronik resmi.",
       },
       {
         kode: "PBI",
@@ -253,7 +458,7 @@ export const regulasiData: Record<string, KategoriRegulasi> = {
         ringkasan: "Penggunaan Virtual Account, escrow account, dan Rekening Dana Lender (RDL) yang terkoneksi aman dengan perbankan.",
         status: "Berlaku",
         tahun: null,
-        detailTambahan: "Mengatur mekanisme pembayaran dan pengelolaan dana dalam transaksi LPBBTI."
+        detailTambahan: "Mengatur mekanisme pembayaran dan pengelolaan dana dalam transaksi LPBBTI.",
       },
     ],
   },
@@ -283,7 +488,10 @@ export const domainColors: Record<string, string> = {
   "Pelaporan": "#636e72",
   "Etika": "#b2bec3",
   "Pembayaran": "#dfe6e9",
-  "Escrow": "#b2bec3",
+  "Escrow": "#74b9ff",
+  "Anti Fraud": "#e17055",
+  "Audit Eksternal": "#b2bec3",
+  "Mitigasi Risiko": "#6c5ce7",
 };
 
 export const getAllDomains = (): string[] => {
