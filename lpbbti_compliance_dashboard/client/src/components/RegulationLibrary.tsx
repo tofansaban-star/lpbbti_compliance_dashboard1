@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { ChevronDown, ChevronUp, Search, Lightbulb } from 'lucide-react';
+import { ChevronDown, ChevronUp, Search, Lightbulb, FileText, ExternalLink, X } from 'lucide-react';
 import { useRegulationSearch, getSuggestedSearches } from '@/hooks/useRegulationSearch';
 import SearchResults from '@/components/SearchResults';
 import CustomRegulationsModal from '@/components/CustomRegulationsModal';
@@ -15,6 +15,7 @@ export default function RegulationLibrary() {
   const [selectedDomain, setSelectedDomain] = useState('Semua');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
+  const [pdfItem, setPdfItem] = useState<string | null>(null);
 
   const { customRegulations } = useCustomRegulations();
 
@@ -240,6 +241,47 @@ export default function RegulationLibrary() {
                       {regulasi.tahun && <span>Tahun: <span className="font-medium">{regulasi.tahun}</span></span>}
                       {'isCustom' in regulasi && (regulasi as any).isCustom && <span className="text-green-600 font-medium">• Custom</span>}
                     </div>
+
+                    {regulasi.dokumenUrl && (
+                      <div className="pt-2 flex gap-2">
+                        <button
+                          onClick={() => setPdfItem(pdfItem === regulasi.kode ? null : regulasi.kode)}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                        >
+                          <FileText className="h-3.5 w-3.5" />
+                          {pdfItem === regulasi.kode ? 'Tutup Dokumen' : 'Lihat Dokumen'}
+                        </button>
+                        <a
+                          href={regulasi.dokumenUrl?.replace('/preview', '/view')}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          Buka di Tab Baru
+                        </a>
+                      </div>
+                    )}
+
+                    {pdfItem === regulasi.kode && regulasi.dokumenUrl && (
+                      <div className="pt-3">
+                        <div className="relative rounded-lg overflow-hidden border border-border bg-muted">
+                          <div className="flex items-center justify-between px-3 py-2 bg-muted border-b border-border">
+                            <span className="text-xs text-muted-foreground font-medium">{regulasi.kode} — {regulasi.nama}</span>
+                            <button onClick={() => setPdfItem(null)} className="text-muted-foreground hover:text-foreground">
+                              <X className="h-4 w-4" />
+                            </button>
+                          </div>
+                          <iframe
+                            src={regulasi.dokumenUrl}
+                            className="w-full"
+                            style={{ height: '600px', border: 'none' }}
+                            title={regulasi.nama}
+                            allow="autoplay"
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </Card>
